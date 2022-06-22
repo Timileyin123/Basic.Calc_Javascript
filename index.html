@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc. Built With JS</title>
+</head>
+<body>
+<h1>Basic Arithmetic Calculator</h1>
+    <script>
+
+let operator = prompt('Enter which operator you want to perform/use (eg. +, -, / or *):');
+let numOne = +prompt('Enter First Number:');
+let numTwo = +prompt('Enter Second Number:');
+
+let result;
+
+if (isNaN(numOne) || isNaN(numTwo)) {
+  alert('Error! Kindly refresh the page and input numbers in the required field!');
+} else if (operator === '+') {
+  result = numOne + numTwo;
+} else if (operator === '-') {
+  result = numOne - numTwo;
+} else if (operator === '/') {
+  result = numOne / numTwo;
+} else if (operator === '*') {
+  result = numOne * numTwo;
+} else {
+  alert('Error! Kindly check the operator used');
+}
+
+let message = numOne + ' ' + operator + ' ' + numTwo + '= ' + result;
+
+alert(message);
+    </script>
+</body>
+</html>
